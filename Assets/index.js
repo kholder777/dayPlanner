@@ -17,4 +17,27 @@ for (var i = 0; i < alltextarea.length; i++) {
 	}
 }
 
-// save button to local storage
+// // save button to local storage
+// $(document).ready(function () {
+// 	$("button").click(function () {
+// 		console.log(this, typeof);
+// 	});
+// });
+
+$(document).ready(function () {
+	$("button").click(function () {
+		storeTxtArea();
+	});
+});
+
+function storeTxtArea() {
+	for (let i = 0; i < alltextarea.length; i++) {
+		localStorage.setItem(
+			alltextarea[i].getAttribute("id"),
+			alltextarea[i].value
+		);
+		// const element = alltextarea[time];
+	}
+	alltextarea;
+	// If storedevent + each text area
+}
